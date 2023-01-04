@@ -1,5 +1,6 @@
 module.exports = function toReadable(number) {
     let numStr = number.toString();
+    let result = "";
     let arrNum = [
         "zero",
         "one",
@@ -33,8 +34,8 @@ module.exports = function toReadable(number) {
             result = arrNum[number / 10 + 10].slice(0, -4);
             return result + "ty";
         } else {
-            result;
-            return toReadable(numStr[0] + 0) + " " + toReadable(numStr[1]);
+            result = toReadable(numStr[0] + 0) + " " + toReadable(numStr[1]);
+            return result;
         }
     }
     if (number > 99) {
@@ -47,5 +48,3 @@ module.exports = function toReadable(number) {
         return result;
     }
 };
-
-
